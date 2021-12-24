@@ -150,7 +150,7 @@ function gameOver() {
     ctx.font = "50px Arial";
     ctx.fillStyle = "yellow";
     
-    ctx.fillText(`继续努力！`, 80, 200);
+    ctx.fillText(``, 80, 200);
     ctx.font = "30px Arial";
     ctx.fillText(`Final score: ${score}`, 130, 240);
     ctx.fillText('Press space to continue', 80, 280);
@@ -165,7 +165,7 @@ function gameOverGift() {
     ctx.font = "50px Arial";
     ctx.fillStyle = "yellow";
     ctx.fillText(`拿到礼物`, 80, 200);
-    ctx.fillText(`微信分数领取`, 80, 280);
+    ctx.fillText(`千里挑一！`, 80, 280);
     ctx.font = "30px Arial";
 
 
@@ -199,10 +199,9 @@ function processGifts() {
                     g.alive = false;
                     if (!g.bomb) {
                         score += 5;
-                        if (score >=468){
+                        if (score >= 1000){
                             setHighScore();
-                            setGameMode(gameModes.WIN);
-                            
+                            setGameMode(gameModes.WIN);  
                         }
                     } else {
                         doBombCollision();
@@ -315,7 +314,7 @@ function drawHUD() {
 }
 
 function initialiseGame() {
-    health = 3;
+    health = 2;
     elfX = (canvas.width - elfWidth) / 2;
     bangTime = 0;
     score = 0;
