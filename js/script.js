@@ -149,7 +149,7 @@ function gameLoop() {
 function gameOver() {
     ctx.font = "50px Arial";
     ctx.fillStyle = "yellow";
-    ctx.fillText(`GAME OVER!`, 80, 200);
+    
     ctx.fillText(`继续努力！`, 80, 200);
     ctx.font = "30px Arial";
     ctx.fillText(`Final score: ${score}`, 130, 240);
